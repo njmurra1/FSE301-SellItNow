@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<div class="search">
+<center><form action="http://www.insertsitenamehere.com"><center>
+		<input type="text" name="search" placeholder="Search Here...">
+		<input type="submit"value="search">
+		</form>
+		
+</div>
+
+</body>
+</html>
+<html>
+<head>
+<title>Login Page </title>
+</head>
+<body>
+<left><h3>Email</h3></left>
+<left><input name="uName" type="text" size="?" maxlength="?"></left>
+<left><h3>Password</h3></left>
+<left><input name="pWord" type="text" size="?" maxlength="?"></left>
+<left><h4>Please Click on Log in Button</h4></left>
+<left><input type="submit" value="Log in"></left>
+<?php
+$sql = "INSERT INTO  UName(UserName, Password)
+VALUES ("uName", "pWord")
+?>
+</body>
+</html>
+
+<html>
+<?php
+<!-- Will need to change once it moves to an actual hosting website -->
+$servername = "localhost";
+$username = "root";
+<!-- Not really the password. I'm not putting that on github -->
+$password = "password";
+$dbname = "FSE301-SellItNow";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px }
+    #map_canvas { height: 100% }
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+//global variables
+var map;
+ 
+//function that runs when the page loads
+function initialize() 
+{
+    //center lat/lon
+    var latlng = new google.maps.LatLng(33.424159, -111.928139);
+ 
+    //map configutations
+    var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    //create the map
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+}
+</script>
+    <form>
+    <input type="text" name="Item" label="Item"/>        <br>
+    <textarea type="text" name="Description" label="Description"></textarea>
+    <br>
+    <input type=""
+    <form method="post" enctype="multipart/form-data">
+    </form>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+    </form>
+    <?php
+    $sql = "INSERT INTO  Listings(Item, Description, Image)
+    VALUES ("Item", "Description")
+    ?>
+    
+</head>
+<!-- body of the page with an onload to run the initialize function -->
+<body onload="initialize()">
+    <!-- the map container -->
+    <div id="map_canvas" style="width:50%; height:65%"></div>
+</body>
+</html
+
+
+
